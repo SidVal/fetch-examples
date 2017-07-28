@@ -25,11 +25,11 @@
 fetch(myRequest)
   .then(function(response) { return response.json(); })
   .then(function(data) {
-    for (var i = 0; i < data.topics.length; i++) {
+    for (var i = 0; i < data.topic_list.topics.length; i++) {
       var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + data.topics[i].title + '</strong> con ' +
-                           data.topics[i].posts_count +
-                           'respuestas y valorado <strong>' + data.topics[i].like_count + '</strong> veces';
+      listItem.innerHTML = '<strong>' + data.topic_list.topics[i].title + '</strong> con ' +
+                           data.topic_list.topics[i].posts_count +
+                           'respuestas y valorado <strong>' + data.topic_list.topics[i].like_count + '</strong> veces';
       myList.appendChild(listItem);
     }
   });
