@@ -14,22 +14,22 @@
   </head>
 
   <body>
-    <h1>Prueba 2</h1>
+    <h1>Prueba 3</h1>
     <ul>
     </ul>
 
   </body>
   <script>
   var myList = document.querySelector('ul');
-  var myRequest = new Request('latest.json');
+  var myRequest = new Request('http://foros.consultoria-sap.com/latest.json');
 fetch(myRequest)
   .then(function(response) { return response.json(); })
   .then(function(data) {
     for (var i = 0; i < data.topic_list.topics.length; i++) {
       var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + data.topic_list.topics[i].title + '</strong> con ' +
+      listItem.innerHTML = '<strong>' + data.topic_list.topics[i].title + '</strong> valorado ' +
                            data.topic_list.topics[i].like_count +
-                           ' likes y <strong>respondido ' + data.topic_list.topics[i].posts_count + '</strong> veces';
+                           ' veces!';
       myList.appendChild(listItem);
     }
   });
