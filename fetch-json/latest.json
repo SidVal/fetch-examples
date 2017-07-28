@@ -1,0 +1,80 @@
+JSONJSONLint - The JSON Validator
+More Developer Tools
+Try the New Pro
+ 
+
+1
+{
+2
+    "users": [{
+3
+        "id": 6035,
+4
+        "username": "albertregalad",
+5
+        "avatar_template": "/user_avatar/foros.consultoria-sap.com/albertregalad/{size}/7546_1.png"
+6
+    }, {
+7
+        "id": 1099,
+8
+        "username": "squall192",
+9
+        "avatar_template": "/user_avatar/foros.consultoria-sap.com/squall192/{size}/8692_1.png"
+10
+    }, {
+11
+        "id": 534,
+12
+        "username": "millan_karim",
+13
+        "avatar_template": "/letter_avatar_proxy/v2/letter/m/ce7236/{size}.png"
+14
+    }, {
+15
+        "id": 1,
+16
+        "username": "SidV",
+17
+        "avatar_template": "/user_avatar/foros.consultoria-sap.com/sidv/{size}/714_1.png"
+18
+    }, {
+19
+        "id": 12,
+20
+        "username": "Salco",
+21
+        "avatar_template": "/user_avatar/foros.consultoria-sap.com/salco/{size}/7463_1.png"
+22
+    }, {
+23
+        "id": 6833,
+24
+        "username": "wlberth90",
+Validate JSON  Clear Support JSONLint for $2/Month
+Results
+
+Valid JSON
+JSONLint Partners
+Check out their products!
+
+Adobe
+Limited time offer: Get 10 free Adobe Stock images.
+About JSONLint?
+JSONLint is a validator and reformatter for JSON, a lightweight data-interchange format. Copy and paste, directly type, or input a URL in the editor above and let JSONLint tidy and validate your messy JSON code.
+Tips & Tricks
+You can directly input a URL into the editor and JSONLint will scrape it for JSON and parse it.
+You can provide JSON to lint in the URL if you link to JSONLint with the "json" parameter. Here's an example URL to test.
+JSONLint can also be used as a JSON compressor if you add ?reformat=compress to the URL.
+Common Errors
+Expecting 'STRING' - You probably have an extra comma at the end of your collection. Something like { "a": "b", }
+Expecting 'STRING', 'NUMBER', 'NULL', 'TRUE', 'FALSE', '{', '[' - You probably have an extra comma at the end of your list. Something like: ["a", "b", ]
+Enclosing your collection keys in quotes. Proper format for a collection is { "key": "value" }
+Make sure you follow JSON's syntax properly. For example, always use double quotes, always quotify your keys, and remove all callback functions.
+Different Results
+If you use a Windows computer you may end up with different results. This is possibly due to the way Windows handles newlines. Essentially, if you have just newline characters (\n) in your JSON and paste it into JSONLint from a Windows computer, it may validate it as valid erroneously since Windows may need a carriage return (\r) as well to detect newlines properly. As a solution, either use direct URL input, or make sure your content's newlines match the architecture your system expects!
+Credits
+Maintained by Andrey Gubanov. Thanks to Douglas Crockford of JSON and JS Lint, and Zach Carter, who built a pure JavaScript implementation. You can download the JSONLint source code on GitHub.
+
+ 
+© 2017 JSONLint.com — Advertise Here
