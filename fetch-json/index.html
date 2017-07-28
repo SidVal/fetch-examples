@@ -27,7 +27,7 @@
     .then(function(json) {
       for(var i = 0; i < json.topics.length; i++) {
         var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + json.products[i].title + '</strong>';
+        listItem.innerHTML = '<strong>' + json.topics[i].title + '</strong>';
         /*
         listItem.innerHTML +=' can be found in ' + json.products[i].Location + '.';
         listItem.innerHTML +=' Cost: <strong>£' + json.products[i].Price + '</strong>'; 
