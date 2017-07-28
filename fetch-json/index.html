@@ -19,38 +19,19 @@
     </ul>
 
   </body>
-<!--//  <script>
-    var myList = document.querySelector('ul');
-
-    fetch('products.json')
-    .then(function(response) { return response.json(); })
-    .then(function(json) {
-      for(var i = 0; i < json.topics.length; i++) {
-        var listItem = document.createElement('li');
-        listItem.innerHTML = '<strong>' + json.topics[i].title + '</strong>';
-        /*
-        listItem.innerHTML +=' can be found in ' + json.products[i].Location + '.';
-        listItem.innerHTML +=' Cost: <strong>£' + json.products[i].Price + '</strong>'; 
-        */
-        myList.appendChild(listItem);
-      }
-    });
-
-  </script>
-//-->
   <script>
   var myList = document.querySelector('ul');
 
-  var myRequest = new Request('products_orig.json');
+  var myRequest = new Request('temas.json');
 
 fetch(myRequest)
   .then(function(response) { return response.json(); })
   .then(function(data) {
-    for (var i = 0; i < data.products.length; i++) {
+    for (var i = 0; i < data.topics.length; i++) {
       var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + data.products[i].Name + '</strong> can be found in ' +
-                           data.products[i].Location +
-                           '. Cost: <strong>£' + data.products[i].Price + '</strong>';
+      listItem.innerHTML = '<strong>' + data.topics[i].title + '</strong> con ' +
+                           data.topics[i].posts_count +
+                           'respuestas y valorado <strong>' + data.topics[i].like_count + '</strong> veces';
       myList.appendChild(listItem);
     }
   });
