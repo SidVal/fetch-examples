@@ -1,8 +1,76 @@
-{ "products" : [
+/* { "products" : [
   { "Name": "Cheese", "Price" : 2.50, "Location": "Refrigerated foods"},
   { "Name": "Crisps", "Price" : 3, "Location": "the Snack isle"},
   { "Name": "Pizza", "Price" : 4, "Location": "Refrigerated foods"},
   { "Name": "Chocolate", "Price" : 1.50, "Location": "the Snack isle"},
   { "Name": "Self-raising flour", "Price" : 1.50, "Location": "Home baking"},
   { "Name": "Ground almonds", "Price" : 3, "Location": "Home baking"}
-]}
+]} */
+
+{
+	"users": [{
+		"id": 12,
+		"username": "Salco",
+		"avatar_template": "/user_avatar/foros.consultoria-sap.com/salco/{size}/7463_1.png"
+	}, {
+		"id": 1099,
+		"username": "squall192",
+		"avatar_template": "/user_avatar/foros.consultoria-sap.com/squall192/{size}/8692_1.png"
+	}],
+	"primary_groups": [{
+		"id": 50,
+		"name": "Suscriptores",
+		"flair_url": "fa-handshake-o",
+		"flair_bg_color": "b3ffb3",
+		"flair_color": "006600"
+	}],
+	"topic_list": {
+		"can_create_topic": true,
+		"draft": null,
+		"draft_key": "new_topic",
+		"draft_sequence": 425,
+		"per_page": 30,
+		"topics": [{
+			"id": 17610,
+			"title": "Cantidad y unidad de medida maestro activos fijos",
+			"fancy_title": "Cantidad y unidad de medida maestro activos fijos",
+			"slug": "cantidad-y-unidad-de-medida-maestro-activos-fijos",
+			"posts_count": 2,
+			"reply_count": 0,
+			"highest_post_number": 2,
+			"image_url": null,
+			"created_at": "2017-07-28T12:15:44.699Z",
+			"last_posted_at": "2017-07-28T13:53:16.405Z",
+			"bumped": true,
+			"bumped_at": "2017-07-28T13:53:16.405Z",
+			"unseen": true,
+			"pinned": false,
+			"unpinned": null,
+			"visible": true,
+			"closed": false,
+			"archived": false,
+			"bookmarked": null,
+			"liked": null,
+			"views": 5,
+			"like_count": 0,
+			"has_summary": false,
+			"archetype": "regular",
+			"last_poster_username": "squall192",
+			"category_id": 5,
+			"pinned_globally": false,
+			"tags": [],
+			"has_accepted_answer": false,
+			"posters": [{
+				"extras": null,
+				"description": "Autor original",
+				"user_id": 12,
+				"primary_group_id": 50
+			}, {
+				"extras": "latest",
+				"description": "Autor más reciente",
+				"user_id": 1099,
+				"primary_group_id": null
+			}]
+		}]
+	}
+}
