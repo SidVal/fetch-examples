@@ -21,7 +21,8 @@
   </body>
   <script>
   var myList = document.querySelector('ul');
-  var Init = { method: 'GET' };
+  var Init = {  method: 'GET',
+                mode: 'no-cors' };
   var myRequest = new Request('http://foros.consultoria-sap.com/latest.json',Init);
 fetch(myRequest)
   .then(function(response) { return response.json(); })
