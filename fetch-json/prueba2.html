@@ -14,14 +14,14 @@
   </head>
 
   <body>
-    <h1>Prueba 3</h1>
+    <h1>Prueba 3.1</h1>
     <ul>
     </ul>
 
   </body>
   <script>
   var myList = document.querySelector('ul');
-  var myRequest = new Request('http://foros.consultoria-sap.com/latest.json','no-cors');
+  var myRequest = new Request('http://foros.consultoria-sap.com/latest.json',GET);
 fetch(myRequest)
   .then(function(response) { return response.json(); })
   .then(function(data) {
