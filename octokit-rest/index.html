@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>A-list v.02</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script scr="/octokit-rest.js"></script>
+  </head>
+
+  <body>
+    <h1>OctoKit Tests v0.1</h1>
+    <ul>
+    </ul>
+
+  </body>
+  <script>
+  var myList = document.querySelector('ul');
+
+  var myRequest = new Request('https://api.github.com/search/topics?q=awesome+is:featured');
+
+fetch(myRequest)
+  .then(function(response) { return response.json(); })
+  .then(function(data) {
+    for (var i = 0; i < data.items.length; i++) {
+      var listItem = document.createElement('li');
+      listItem.innerHTML = 'Repo: <strong>' + data.items[i].full_name + '</strong>, URL: ' +
+                           data.items[i].html_url +
+                           ' estrellas: <strong>' + data.items[i].stargazers_count + '</strong>';
+      myList.appendChild(listItem);
+    }
+  });
+  </script>
+</html>
