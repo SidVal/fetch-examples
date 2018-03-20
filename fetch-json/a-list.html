@@ -27,11 +27,11 @@
 fetch(myRequest)
   .then(function(response) { return response.json(); })
   .then(function(data) {
-    for (var i = 0; i < data.topics.length; i++) {
+    for (var i = 0; i < data.items.length; i++) {
       var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + data.topics[i].title + '</strong> con ' +
-                           data.topics[i].posts_count +
-                           'respuestas y valorado <strong>' + data.topics[i].like_count + '</strong> veces';
+      listItem.innerHTML = '<strong>' + data.items[i].full_name + '</strong> con ' +
+                           data.items[i].html_url +
+                           'estrellas: <strong>' + data.items[i].stargazers_count + '</strong>';
       myList.appendChild(listItem);
     }
   });
