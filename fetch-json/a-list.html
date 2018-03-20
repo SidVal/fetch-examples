@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Últimos temas 2</title>
+
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <h1>Últimos temas</h1>
+    <ul>
+    </ul>
+
+  </body>
+  <script>
+  var myList = document.querySelector('ul');
+
+  var myRequest = new Request('https://api.github.com/search/repositories?q=topic:awesome-list');
+
+fetch(myRequest)
+  .then(function(response) { return response.json(); })
+  .then(function(data) {
+    for (var i = 0; i < data.topics.length; i++) {
+      var listItem = document.createElement('li');
+      listItem.innerHTML = '<strong>' + data.topics[i].title + '</strong> con ' +
+                           data.topics[i].posts_count +
+                           'respuestas y valorado <strong>' + data.topics[i].like_count + '</strong> veces';
+      myList.appendChild(listItem);
+    }
+  });
+  </script>
+</html>
