@@ -22,16 +22,16 @@
   <script>
   var myList = document.querySelector('ul');
 
-  var myRequest = new Request('https://api.github.com/search/repositories?q=topic:awesome-list');
+  var myRequest = new Request('https://api.github.com/search/repositories?q=topic:awesome-list&sort=updated&order=desc');
 
 fetch(myRequest)
   .then(function(response) { return response.json(); })
   .then(function(data) {
     for (var i = 0; i < data.items.length; i++) {
       var listItem = document.createElement('li');
-      listItem.innerHTML = '<strong>' + data.items[i].full_name + '</strong> con ' +
+      listItem.innerHTML = 'Repo: <strong>' + data.items[i].full_name + '</strong>, URL: ' +
                            data.items[i].html_url +
-                           'estrellas: <strong>' + data.items[i].stargazers_count + '</strong>';
+                           ' estrellas: <strong>' + data.items[i].stargazers_count + '</strong>';
       myList.appendChild(listItem);
     }
   });
